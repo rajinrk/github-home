@@ -7,11 +7,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Pull from './icons/pull.png'
 import notification from './icons/notification.png'
+import RightBar from './utility/rightSideBar';
+import { useState } from 'react';
 
-export default function NavBar() {
+export default function NavBar({ onRightBarShow , onLeftBarShow}) {
+
+
+
+
     return (
         <Navbar expand="lg" className="bg-body-tertiary border-bottom">
             <Container fluid>
+                <button onClick={onLeftBarShow} className='issues'>
+                    <img style={{ width: '16px', height: '16px' }} />
+                </button>
                 <Navbar.Brand href="#">Dashboard</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -22,7 +31,7 @@ export default function NavBar() {
                     >
                         <Nav.Link href="#action1">Home</Nav.Link>
                         <Nav.Link href="#action2">Link</Nav.Link>
-                        
+
                         <Nav.Link href="#" disabled>
                             Link
                         </Nav.Link>
@@ -36,7 +45,7 @@ export default function NavBar() {
                         />
                         <span className='search-break'>|</span>
                         <Button variant="outline-success search-button">
-                            
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                             </svg>
@@ -44,7 +53,7 @@ export default function NavBar() {
                         </Button>
                     </Form>
                     <Nav className='drop-down'>
-                    <NavDropdown className='anchor-drop' title="+" id="navbarScrollingDropdown">
+                        <NavDropdown className='anchor-drop' title="+" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
                                 Another action
@@ -54,7 +63,7 @@ export default function NavBar() {
                                 Something else here
                             </NavDropdown.Item>
                         </NavDropdown>
-                        </Nav>
+                    </Nav>
 
                     <Nav.Link className='issues' href="#" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
@@ -64,15 +73,24 @@ export default function NavBar() {
                     </Nav.Link>
 
                     <Nav.Link className=' issues ' href="#" >
-                        <img src={Pull} style={{width:'16px',height:'16px'}}/>
+                        <img src={Pull} style={{ width: '16px', height: '16px' }} />
                     </Nav.Link>
 
                     <Nav.Link className='issues' href="#" >
-                    <img src={notification} style={{width:'16px',height:'16px'}}/>
+                        <img src={notification} style={{ width: '16px', height: '16px' }} />
                     </Nav.Link>
 
-                   
-                    
+
+                    <button onClick={onRightBarShow} className='issues'>
+                        <img style={{ width: '16px', height: '16px' }} />
+                    </button>
+
+
+
+
+
+
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>

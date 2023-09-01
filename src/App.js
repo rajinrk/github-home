@@ -2,16 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
+
 import NavBar from './components/NavBar';
+import HomePage from './components/Home';
+import Land from './components/Home';
+import { createContext } from 'react';
 
 function App() {
+ const  RightBarContext = createContext()
   return (
     <div className="App">
       <BrowserRouter>
-      <NavBar/>
+     
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<HomePage/>} />
         </Routes>
       </BrowserRouter>
       
