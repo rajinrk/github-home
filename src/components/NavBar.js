@@ -7,35 +7,31 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Pull from './icons/pull.png'
 import notification from './icons/notification.png'
-import RightBar from './utility/rightSideBar';
-import { useState } from 'react';
+import Menu from './icons/menu.png'
+import Github from './icons/github.svg'
+import Profile from './icons/profile.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar({ onRightBarShow , onLeftBarShow}) {
 
-
-
-
+    const navigate = useNavigate()
     return (
         <Navbar expand="lg" className="bg-body-tertiary border-bottom">
             <Container fluid>
-                <button onClick={onLeftBarShow} className='issues'>
-                    <img style={{ width: '16px', height: '16px' }} />
+                <button onClick={onLeftBarShow} className='issues more mx-2'>
+                <img src={Menu} style={{ width: '16px', height: '16px' }} />
                 </button>
-                <Navbar.Brand href="#">Dashboard</Navbar.Brand>
+                <button onClick={()=>navigate('/')} className='issues more mx-2'>
+                <img src={Github} style={{ width: '16px', height: '16px' }} />
+                </button>
+                <Navbar.Brand className='fw-bold' href="#">Dashboard</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                         navbarScroll
-                    >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
-
-                        <Nav.Link href="#" disabled>
-                            Link
-                        </Nav.Link>
-                    </Nav>
+                    ></Nav>
                     <Form className="d-flex search-bar">
                         <Form.Control
                             type="search"
@@ -79,19 +75,12 @@ export default function NavBar({ onRightBarShow , onLeftBarShow}) {
                     <Nav.Link className='issues' href="#" >
                         <img src={notification} style={{ width: '16px', height: '16px' }} />
                     </Nav.Link>
-
-
-                    <button onClick={onRightBarShow} className='issues'>
-                        <img style={{ width: '16px', height: '16px' }} />
+                    <button onClick={onRightBarShow} className='profile '>
+                        <img src={Profile}   />
                     </button>
-
-
-
-
-
-
-
+                    
                 </Navbar.Collapse>
+                
             </Container>
         </Navbar>
     )

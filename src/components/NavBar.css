@@ -41,3 +41,17 @@
 #navbarScrollingDropdown{
     padding: 3px;
 }
+.more section{
+    width:100%;
+    border-bottom: 5px solid grey;
+}
+.profile{
+    border:1px solid grey;
+    border-radius: 50px;
+    padding:5px;
+    box-sizing: border-box;
+}
+.profile img{
+    width:35px;
+    height:35px;
+}
