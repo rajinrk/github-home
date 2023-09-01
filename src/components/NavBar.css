@@ -1,0 +1,43 @@
+
+.issues{
+    padding:10px !important ;
+    box-sizing: border-box;
+    border: 1px solid rgb(189, 188, 188) !important;
+    border-radius: 5px !important;
+    color:rgb(53, 47, 47);
+    margin:0px 4px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar{
+    position:relative;
+     
+}
+.search-input{
+    border: 1px solid rgb(189, 188, 188)
+}
+.search-button{
+    position: absolute;
+    right:7px;
+    border: none;
+    color:rgb(48, 47, 47);
+    font-weight: bold;
+    
+}
+.search-break{
+    position: absolute;
+    right:50px;
+    top:5px;
+    color: rgb(192, 189, 189);
+    font-weight:200;
+}
+.drop-down{
+    border: 1px solid rgb(189, 188, 188);
+    border-radius: 5px;
+   font-size: 20px;
+   padding:0px 2px
+}
+#navbarScrollingDropdown{
+    padding: 3px;
+}
