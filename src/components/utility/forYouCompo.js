@@ -1,7 +1,7 @@
 export default function ForYouComponent() {
     return (
         <div style={{ width: '100%' }}>
-            <section style={{ width: "100%", textAlign: 'left', paddingTop: '10px' }}>
+            <section style={{ width: "100%", textAlign: 'left',padding: '10px 20px 0px 20px' }}>
                 <span style={{ color: 'grey' }} >start writing code</span>
                 <span style={{ float: 'right', fontWeight: '1000' }} >...</span>
             </section>
