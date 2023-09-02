@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './rightSection.css'
 import NavBarII from './navBar-2';
 import ForYouComponent from './forYouCompo';
+import ToolsUse from './tools';
 export default function RightSection(){
    const [forYou,setForYou] = useState(true)
     const [following,setFollowing] = useState(false)
@@ -19,6 +20,7 @@ export default function RightSection(){
             <NavBarII handleForYou={handleForYou} handleFollowing={handleFollowing} />
             {forYou && <ForYouComponent/>}
             {following && <div>following</div>}
+            <ToolsUse/>
         </section>
         <section className='explore-container'>
 
