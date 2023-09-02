@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function NavBarII({ handleForYou,handleFollowing,following }) {
     return (
-        <Navbar expand="lg" className="" style={{backgroundColor:'rgb(212, 218, 218)' , borderBottom:'1px solid grey'}}>
+        <Navbar expand="lg" className="" style={{backgroundColor:'rgb(245, 252, 252)' , borderBottom:'1px solid rgb(212, 210, 210)'}}>
       <Container>
         <Navbar.Brand  onClick={handleForYou} style={{fontSize:'1rem', fontWeight:'500',cursor:'pointer'}}>For you</Navbar.Brand>
         <Navbar.Brand  onClick={handleFollowing} style={{fontSize:'1rem', fontWeight:'500', cursor:'pointer'}}>following</Navbar.Brand>

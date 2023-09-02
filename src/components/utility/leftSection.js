@@ -21,7 +21,7 @@ export default function LeftSection(){
                 <button onClick={()=>navigate('/new')}>New</button>
             </section>
             <section style={{width:'100%'}}>
-                <input type='search' placeholder='Find a repository...' style={{padding:'2px 5px',width:'100%',marginTop:'7px',borderRadius:'5px',border:'none', border:'0.5px solid grey'}}></input>
+                <input type='search' placeholder='Find a repository...' style={{padding:'2px 5px',width:'100%',marginTop:'7px',borderRadius:'5px', border:'0.5px solid rgb(212, 210, 210)'}}></input>
             </section>
             <ul className='repos'  >
                 {repository.map((element,idx)=>{

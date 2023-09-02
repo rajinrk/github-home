@@ -16,15 +16,15 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
 
     const navigate = useNavigate()
     return (
-        <Navbar expand="lg" className=" border-bottom" style={{backgroundColor: 'rgb(212, 218, 218)'}}>
+        <Navbar expand="lg"  style={{backgroundColor: 'rgb(245, 252, 252)'}}>
             <Container fluid>
                 <button onClick={onLeftBarShow} className='issues more mx-2 '>
                     <img src={Menu} style={{ width: '16px', height: '16px' }} />
                 </button>
-                <button onClick={() => navigate('/')} className='profile p-0'>
+                <button onClick={() => navigate('/')} className='profile p-0 mx-3'>
                     <img src={Github} />
                 </button>
-                <Navbar.Brand className='fw-semibold mx-2' href="#">Dashboard</Navbar.Brand>
+                <Navbar.Brand className=' mx-2 ' style={{fontSize :'1rem',fontWeight:'600'}} href="#">Dashboard</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
