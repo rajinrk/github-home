@@ -1,7 +1,8 @@
 .not-visible{
-    /* visibility: hidden; */
     display: none;
 }
-/* .visible{
-    display:none;
-} */
+.main-element{
+    display: flex;
+    width:100vw;
+    position:relative;
+}

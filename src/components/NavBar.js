@@ -12,19 +12,19 @@ import Github from './icons/github.svg'
 import Profile from './icons/profile.png'
 import { useNavigate } from 'react-router-dom';
 
-export default function NavBar({ onRightBarShow , onLeftBarShow}) {
+export default function NavBar({ onRightBarShow, onLeftBarShow }) {
 
     const navigate = useNavigate()
     return (
         <Navbar expand="lg" className="bg-body-tertiary border-bottom">
             <Container fluid>
-                <button onClick={onLeftBarShow} className='issues more mx-2'>
-                <img src={Menu} style={{ width: '16px', height: '16px' }} />
+                <button onClick={onLeftBarShow} className='issues more mx-2 '>
+                    <img src={Menu} style={{ width: '16px', height: '16px' }} />
                 </button>
-                <button onClick={()=>navigate('/')} className='issues more mx-2'>
-                <img src={Github} style={{ width: '16px', height: '16px' }} />
+                <button onClick={() => navigate('/')} className='profile p-0'>
+                    <img src={Github} />
                 </button>
-                <Navbar.Brand className='fw-bold' href="#">Dashboard</Navbar.Brand>
+                <Navbar.Brand className='fw-semibold mx-2' href="#">Dashboard</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -32,7 +32,7 @@ export default function NavBar({ onRightBarShow , onLeftBarShow}) {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     ></Nav>
-                    <Form className="d-flex search-bar">
+                    <Form className="d-flex w-40 search-bar" style={{width:'30%'}}>
                         <Form.Control
                             type="search"
                             placeholder="Search"
@@ -76,11 +76,11 @@ export default function NavBar({ onRightBarShow , onLeftBarShow}) {
                         <img src={notification} style={{ width: '16px', height: '16px' }} />
                     </Nav.Link>
                     <button onClick={onRightBarShow} className='profile '>
-                        <img src={Profile}   />
+                        <img src={Profile} />
                     </button>
-                    
+
                 </Navbar.Collapse>
-                
+
             </Container>
         </Navbar>
     )
