@@ -4,6 +4,7 @@ import NavBarII from './navBar-2';
 import ForYouComponent from './forYouCompo';
 import ToolsUse from './tools';
 import GetStarted from './getStarted';
+import Footer from './footer';
 export default function RightSection(){
    const [forYou,setForYou] = useState(true)
     const [following,setFollowing] = useState(false)
@@ -18,16 +19,15 @@ export default function RightSection(){
     return( 
     <div className="right-section-container"  >
         <section className='feeds-container' >
-            <NavBarII handleForYou={handleForYou} handleFollowing={handleFollowing} />
+            <NavBarII handleForYou={handleForYou} following={following} handleFollowing={handleFollowing} />
             {forYou && <ForYouComponent/>}
             {following && <div>following</div>}
-            <ToolsUse/>
-            <GetStarted/>
+            <Footer/>
         </section>
         <section className='explore-container'>
 
         </section>
-    
+        
     </div>
     )
 }

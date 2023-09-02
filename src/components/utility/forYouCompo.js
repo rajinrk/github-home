@@ -1,3 +1,6 @@
+import GetStarted from "./getStarted";
+import ToolsUse from "./tools";
+
 export default function ForYouComponent() {
     return (
         <div style={{ width: '100%' }}>
@@ -59,6 +62,8 @@ export default function ForYouComponent() {
                 </div>
 
             </section>
+            <ToolsUse/>
+            <GetStarted/>
 
         </div>
     )

@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-export default function NavBarII({ handleForYou,handleFollowing }) {
+export default function NavBarII({ handleForYou,handleFollowing,following }) {
     return (
         <Navbar expand="lg" className="" style={{backgroundColor:'rgb(212, 218, 218)' , borderBottom:'1px solid grey'}}>
       <Container>
@@ -11,8 +11,8 @@ export default function NavBarII({ handleForYou,handleFollowing }) {
         <Navbar.Brand  onClick={handleFollowing} style={{fontSize:'1rem', fontWeight:'500', cursor:'pointer'}}>following</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto" style={{marginLeft:'60%'}}>
-            <Nav.Link href="#link">send feedback</Nav.Link>
+        {!following &&<Nav className="me-auto" style={{marginLeft:'60%'}}>
+            <Nav.Link style={{color:'blue'}} href="https://github.com/orgs/community/discussions/categories/feed">send feedback</Nav.Link>
             <NavDropdown title="Filter" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -24,7 +24,7 @@ export default function NavBarII({ handleForYou,handleFollowing }) {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
+          </Nav>}
         </Navbar.Collapse>
       </Container>
     </Navbar>    )

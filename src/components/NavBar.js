@@ -16,7 +16,7 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
 
     const navigate = useNavigate()
     return (
-        <Navbar expand="lg" className="bg-body-tertiary border-bottom">
+        <Navbar expand="lg" className=" border-bottom" style={{backgroundColor: 'rgb(212, 218, 218)'}}>
             <Container fluid>
                 <button onClick={onLeftBarShow} className='issues more mx-2 '>
                     <img src={Menu} style={{ width: '16px', height: '16px' }} />
