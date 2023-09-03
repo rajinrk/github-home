@@ -18,13 +18,15 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
     return (
         <Navbar expand="lg"  style={{backgroundColor: 'rgb(245, 252, 252)'}}>
             <Container fluid>
+                {/* button is used to handle left offcanvas or menu bar */}
                 <button onClick={onLeftBarShow} className='issues more mx-2 '>
                     <img src={Menu} style={{ width: '16px', height: '16px' }} />
                 </button>
+                {/* below button is gitgub logo with onclick will navigate to homepage as of now */}
                 <button onClick={() => navigate('/')} className='profile p-0 mx-3'>
                     <img src={Github} />
                 </button>
-                <Navbar.Brand className=' mx-2 ' style={{fontSize :'1rem',fontWeight:'600'}} href="#">Dashboard</Navbar.Brand>
+                <Navbar.Brand className=' mx-2 ' style={{fontSize :'1rem',fontWeight:'600'}} >Dashboard</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -32,7 +34,8 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     ></Nav>
-                    <Form className="d-flex w-40 search-bar" style={{width:'30%'}}>
+                    {/* below code for searchbar we can store the value in a state and make api calls to backend for getting data matches the search  */}
+                    <Form className="d-flex w-40  search-bar" style={{width:'30%'}}>
                         <Form.Control
                             type="search"
                             placeholder="Search"
@@ -48,33 +51,39 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
                             _
                         </Button>
                     </Form>
+                    {/* bottom code is for dropdown menu where we can add link to new repository creating page or whatever we want to add can add */}
                     <Nav className='drop-down'>
                         <NavDropdown className='anchor-drop' title="+" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
-                                Another action
+                            <NavDropdown.Item href="#newrepo">New Repository</NavDropdown.Item>
+                            <NavDropdown.Item href="#importrepo">
+                                import Repository
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
+                            <NavDropdown.Item href="#somethingelse">
                                 Something else here
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
 
-                    <Nav.Link className='issues' href="#" >
+                    {/* This code take you to issues page where u can search for solution of your issue */}
+                    <Nav.Link className='issues' href="#issues" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                             <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                         </svg>
                     </Nav.Link>
 
-                    <Nav.Link className=' issues ' href="#" >
+                    {/* below code will take to pull page for where you can see the status of your pull requests  */}
+                    <Nav.Link className=' issues ' href="#pullrequest" >
                         <img src={Pull} style={{ width: '16px', height: '16px' }} />
                     </Nav.Link>
 
-                    <Nav.Link className='issues' href="#" >
+                    {/* below code will take you to notification page  */}
+                    <Nav.Link className='issues' href="#notification" >
                         <img src={notification} style={{ width: '16px', height: '16px' }} />
                     </Nav.Link>
+
+                    {/* below code will open right offcanvas */}
                     <button onClick={onRightBarShow} className='profile '>
                         <img src={Profile} />
                     </button>

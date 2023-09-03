@@ -1,5 +1,6 @@
 export default function Following() {
     return (
+       // below code is the following section in the page
         <div style={{width:'100%',display:'flex',alignItems:'center',flexDirection:'column',marginTop:'20px'}}>
             <div class="card" style={{ width: '85%', padding: '3% 3% ',textAlign:'left' }}>
                 <div class="card-body">

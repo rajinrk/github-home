@@ -11,6 +11,9 @@ export default function NavBarII({ handleForYou,handleFollowing,following }) {
         <Navbar.Brand  onClick={handleFollowing} style={{fontSize:'1rem', fontWeight:'500', cursor:'pointer'}}>following</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+          
+          {/* Below code contains send feedback option and a dropdown which will render only when
+           foryou component is rendering it will not render for following component */}
         {!following &&<Nav className="me-auto" style={{marginLeft:'60%'}}>
             <Nav.Link style={{color:'blue'}} href="https://github.com/orgs/community/discussions/categories/feed">send feedback</Nav.Link>
             <NavDropdown title="Filter" id="basic-nav-dropdown">

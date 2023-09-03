@@ -3,6 +3,7 @@ import ToolsUse from "./tools";
 
 export default function ForYouComponent() {
     return (
+        // below code is the foryou section in the page
         <div style={{ width: '100%' }}>
             <section style={{ width: "100%", textAlign: 'left',padding: '10px 20px 0px 20px' }}>
                 <span style={{ color: 'grey' }} >start writing code</span>

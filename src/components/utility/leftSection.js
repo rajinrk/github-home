@@ -8,6 +8,7 @@ export default function LeftSection(){
     const handleScroll = () => {
         setScrollY(window.scrollY);
       };
+      // this useffect is for changing the scrollY state according to the windows Y axis change because this component should be position fixed
       useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -23,6 +24,7 @@ export default function LeftSection(){
             <section style={{width:'100%'}}>
                 <input type='search' placeholder='Find a repository...' style={{padding:'2px 5px',width:'100%',marginTop:'7px',borderRadius:'5px', border:'0.5px solid rgb(212, 210, 210)'}}></input>
             </section>
+            {/* Below ul will render all the repositories you created we can take all the repositories by an API call to backend as of now will take from repository array */}
             <ul className='repos'  >
                 {repository.map((element,idx)=>{
                    return <li key={idx}  style={{textAlign:'left'}}>{element}</li>
