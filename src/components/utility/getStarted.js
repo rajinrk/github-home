@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom"
 import pull from './../icons/pull.png'
 
 export default function GetStarted() {
@@ -22,7 +21,7 @@ export default function GetStarted() {
 
                 <div class="card" style={{ width: '22rem', marginTop: '20px' }}>
                     <div class="card-body">
-                        <img style={{float:'left'}} src={pull} alt='image'/><br/><br/><br/>
+                        <img style={{float:'left'}} src={pull} alt='pull icon'/><br/><br/><br/>
                         <h5 class="card-title" style={{ textAlign: 'left', fontSize: '1rem' }}>Follow this exercise to try the GitHub flow</h5>
                         <p class="card-text" style={{ textAlign: 'left' }}>GitHub's “Hello World” tutorial teaches you essentials, where you create your own repository and learn GitHub's pull request workflow for creating and reviewing code.</p>
                         <a href='https://docs.github.com/en/get-started/quickstart/hello-world' style={{ color:'black',textDecoration:'none', padding:'4px 7px', backgroundColor:'azure',border:'1px solid grey',borderRadius:'5px'}}>Try the Github Flow</a>

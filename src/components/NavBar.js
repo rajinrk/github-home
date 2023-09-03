@@ -20,11 +20,11 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
             <Container fluid>
                 {/* button is used to handle left offcanvas or menu bar */}
                 <button onClick={onLeftBarShow} className='issues more mx-2 '>
-                    <img src={Menu} style={{ width: '16px', height: '16px' }} />
+                    <img src={Menu} style={{ width: '16px', height: '16px' }} alt='menu' />
                 </button>
                 {/* below button is gitgub logo with onclick will navigate to homepage as of now */}
                 <button onClick={() => navigate('/')} className='profile p-0 mx-3'>
-                    <img src={Github} />
+                    <img src={Github} alt='github' />
                 </button>
                 <Navbar.Brand className=' mx-2 ' style={{fontSize :'1rem',fontWeight:'600'}} >Dashboard</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -75,17 +75,17 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
 
                     {/* below code will take to pull page for where you can see the status of your pull requests  */}
                     <Nav.Link className=' issues ' href="#pullrequest" >
-                        <img src={Pull} style={{ width: '16px', height: '16px' }} />
+                        <img src={Pull} style={{ width: '16px', height: '16px' }} alt='pull' />
                     </Nav.Link>
 
                     {/* below code will take you to notification page  */}
                     <Nav.Link className='issues' href="#notification" >
-                        <img src={notification} style={{ width: '16px', height: '16px' }} />
+                        <img src={notification} style={{ width: '16px', height: '16px' }} alt='notification' />
                     </Nav.Link>
 
                     {/* below code will open right offcanvas */}
                     <button onClick={onRightBarShow} className='profile '>
-                        <img src={Profile} />
+                        <img src={Profile} alt='profile'/>
                     </button>
 
                 </Navbar.Collapse>
