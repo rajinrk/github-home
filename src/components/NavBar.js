@@ -52,7 +52,7 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
                     {/* bottom code is for dropdown menu where we can add link to new repository creating page or whatever we want to add can add */}
                     <Nav className='drop-down'>
                         <NavDropdown className='anchor-drop' title="+" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="/newrepo">New Repository</NavDropdown.Item>
+                            <NavDropdown.Item href="/new">New Repository</NavDropdown.Item>
                             <NavDropdown.Item href="/importrepo">
                                 import Repository
                             </NavDropdown.Item>
