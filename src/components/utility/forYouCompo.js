@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import GetStarted from "./getStarted";
 import ToolsUse from "./tools";
 
 export default function ForYouComponent() {
+    const navigate = useNavigate()
     return (
         // below code is the foryou section in the page
         <div style={{ width: '100%' }}>
@@ -33,7 +35,7 @@ export default function ForYouComponent() {
 
                         </div>
                         <p style={{ marginLeft: '10%', color: 'grey', fontSize: '.8rem', width: '70%', textAlign: 'left' }}>You choose who can see and commit to this repository</p>
-                        <button style={{ marginTop: '20px', backgroundColor: 'green', padding: '4px 7px', border: 'none', borderRadius: '7px', color: "white" }}>Create Repository</button>
+                        <button style={{ marginTop: '20px', backgroundColor: 'green', padding: '4px 7px', border: 'none', borderRadius: '7px', color: "white" }} onClick={()=>navigate('/new')}>Create Repository</button>
                     </div>
                 </div>
 
@@ -47,7 +49,7 @@ export default function ForYouComponent() {
                             <div class="card-body">
                                 <div class='d-flex'>
                                     <h5 class="card-title">Card title</h5>
-                                    <button style={{ width: '30%',marginLeft:'30%' , backgroundColor: 'green', fontSize: '1rem',border:'none', padding: '1px 7px' }} class="btn btn-primary">create</button>
+                                    <button style={{ width: '30%',marginLeft:'30%' , backgroundColor: 'green', fontSize: '1rem',border:'none', padding: '1px 7px' }} class="btn btn-primary" onClick={()=>navigate('/new')}>create</button>
 
                                 </div>
                                 <p class="card-text" style={{textAlign:'left'}}>
