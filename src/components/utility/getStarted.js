@@ -8,7 +8,7 @@ export default function GetStarted() {
                 <span style={{ color: 'grey' }} >Get started on GitHub</span>
                 <span style={{ float: 'right', fontWeight: '1000' }} >...</span>
             </section>
-            <section style={{ display: 'flex', justifyContent: "space-between" }}>
+            <section style={{ display: 'flex', justifyContent: "space-between",flexWrap:'wrap' }}>
                 <div class="card" style={{ width: '22rem', marginTop: '20px' }}>
                     
                     <div class="card-body"  >

@@ -1,11 +1,11 @@
 export default function ToolsUse() {
     return (
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%', display:'flex',flexWrap:'wrap' }}>
             <section style={{ width: "100%", textAlign: 'left', padding: '10px 20px 0px 20px' }}>
                 <span style={{ color: 'grey' }} >Use tools of the trade</span>
                 <span style={{ float: 'right', fontWeight: '1000' }} >...</span>
             </section>
-            <section style={{ display: 'flex', justifyContent: "space-between" }}>
+            <section style={{ display: 'flex', justifyContent: "space-between",flexWrap:'wrap' }}>
                 <div class="card" style={{ width: '22rem', marginTop: '20px' }}>
                     <div class="card-body">
                         <h5 class="card-title" style={{ textAlign: 'left', fontSize: '1rem' }}>Simplify your development workflow with a GUI</h5>

@@ -27,8 +27,8 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
                     <img src={Github} alt='github' />
                 </button>
                 <Navbar.Brand className=' mx-2 ' style={{fontSize :'1rem',fontWeight:'600'}} >Dashboard</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
+                <Navbar.Toggle aria-controls="navbarScroll"/>
+                <Navbar.Collapse className="me-auto my-2 my-lg-0"  id="navbarScroll">
                     <Nav
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
@@ -44,11 +44,9 @@ export default function NavBar({ onRightBarShow, onLeftBarShow }) {
                         />
                         <span className='search-break'>|</span>
                         <Button variant="outline-success search-button">
-
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                            _
+                            </svg>_
                         </Button>
                     </Form>
                     {/* bottom code is for dropdown menu where we can add link to new repository creating page or whatever we want to add can add */}

@@ -5,18 +5,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function NavBarII({ handleForYou,handleFollowing,following }) {
     return (
-        <Navbar expand="lg" className="" style={{backgroundColor:'rgb(245, 252, 252)' , borderBottom:'1px solid rgb(212, 210, 210)'}}>
+        <Navbar expand="lg" className="" style={{backgroundColor:'rgb(245, 252, 252)' , borderBottom:'1px solid rgb(212, 210, 210)',paddingBottom:"0px"}}>
       <Container>
-        <Navbar.Brand  onClick={handleForYou} style={!following?{color:"orange",fontSize:'1rem', fontWeight:'500',cursor:'pointer'}:{fontSize:'1rem', fontWeight:'500',cursor:'pointer'}}>For you</Navbar.Brand>
-      <Navbar.Brand  onClick={handleFollowing} style={!following?{fontSize:'1rem', fontWeight:'500', cursor:'pointer'}:{color:"orange",fontSize:'1rem', fontWeight:'500', cursor:'pointer'}}>Following</Navbar.Brand>
+        <Navbar.Brand  onClick={handleForYou} style={!following?{borderBottom:"3px solid orange",fontSize:'1rem', fontWeight:'500',cursor:'pointer'}:{borderBottom:"3px solid transparent",fontSize:'1rem', fontWeight:'500',cursor:'pointer'}}>For you</Navbar.Brand>
+      <Navbar.Brand  onClick={handleFollowing} style={!following?{borderBottom:"3px solid transparent",fontSize:'1rem', fontWeight:'500', cursor:'pointer'}:{borderBottom:"3px solid orange",fontSize:'1rem', fontWeight:'500', cursor:'pointer'}}>Following</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
 
           {/* Below code contains send feedback option and a dropdown which will render only when
            foryou component is rendering it will not render for following component */}
         {!following &&<Nav className="me-auto" style={{marginLeft:'60%'}}>
-            <Nav.Link style={{color:'blue'}} href="https://github.com/orgs/community/discussions/categories/feed">send feedback</Nav.Link>
-            <NavDropdown title="Filter" id="basic-nav-dropdown">
+            <Nav.Link style={{color:'blue',fontSize:'.8rem',}} href="https://github.com/orgs/community/discussions/categories/feed">send feedback</Nav.Link>
+            <NavDropdown title="Filter" style={{fontSize:'.8rem'}} id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action

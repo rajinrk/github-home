@@ -6,12 +6,12 @@ export default function ForYouComponent() {
     const navigate = useNavigate()
     return (
         // below code is the foryou section in the page
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%',display:'flex',flexDirection:'row',flexWrap:'wrap' }}>
             <section style={{ width: "100%", textAlign: 'left',padding: '10px 20px 0px 20px' }}>
                 <span style={{ color: 'grey' }} >start writing code</span>
                 <span style={{ float: 'right', fontWeight: '1000' }} >...</span>
             </section>
-            <section style={{ display: 'flex', justifyContent: "space-between" }}>
+            <section style={{ display: 'flex', justifyContent: "space-between",flexWrap:'wrap' }}>
                 <div class="card" style={{ width: '22rem', marginTop: '20px' }}>
                     <div class="card-body">
                         <h5 class="card-title" style={{ textAlign: 'left', fontSize: '1rem' }}>Start a new repository</h5>

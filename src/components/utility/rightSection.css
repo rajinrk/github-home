@@ -5,7 +5,8 @@
     position:absolute;
     right:0px;
     display:flex; 
-     justify-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px ;
     box-sizing: border-box;
     border-top: 1px solid rgb(212, 210, 210);
@@ -16,7 +17,13 @@
     /* border: 1px solid grey; */
 }
 .explore-container{
-    width:28%;
+   width:28%;
     
     /* border: 1px solid grey; */
+}
+@media(max-width:800px){
+    .explore-container{
+        display:none;
+       
+    }
 }
