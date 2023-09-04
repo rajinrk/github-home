@@ -21,11 +21,11 @@ export default function Recent(){
     return (
         <div style={{width:'100%',textAlign:'left'}}>
             <h6 style={{margin:'30px 0px 0px 20px'}}>Latest Changes</h6>
-            <ul style={{listStyleType:'none',}}>
+            <ul style={{color:'grey'}}>
             {recent.map(({time,description},idx)=>{
                return <li key={idx}>
                     <p style={{fontSize:'.7rem',marginBottom:'0px',marginTop:'10px'}}>{time}</p>
-                    <p style={{fontSize:'.9rem',marginBottom:'0px'}}>{description}</p>
+                    <p style={{fontSize:'.9rem',marginBottom:'0px',color:'black'}}>{description}</p>
                 </li>
             })}
             </ul>
