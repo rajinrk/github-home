@@ -5,6 +5,7 @@ import ForYouComponent from './forYouCompo';
 
 import Footer from './footer';
 import Following from './following';
+import Recent from './recent';
 export default function RightSection(){
     // below state and function is to render any one component according to user selection by
     // sending state as a props as well as function as a props for child to parent communication to NavBarII component
@@ -29,7 +30,7 @@ export default function RightSection(){
             <Footer/>
         </section>
         <section className='explore-container'>
-
+            <Recent/>
         </section>
         
     </div>

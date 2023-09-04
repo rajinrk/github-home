@@ -13,7 +13,7 @@ export default function NavBarII({ handleForYou,handleFollowing,following }) {
         <Navbar.Collapse id="basic-navbar-nav">
 
           {/* Below code contains send feedback option and a dropdown which will render only when
-           foryou component is rendering it will not render for following component */}
+           foryou component is rendering, it will not render for following component */}
         {!following &&<Nav className="me-auto" style={{marginLeft:'60%'}}>
             <Nav.Link style={{color:'blue',fontSize:'.8rem',}} href="https://github.com/orgs/community/discussions/categories/feed">send feedback</Nav.Link>
             <NavDropdown title="Filter" style={{fontSize:'.8rem'}} id="basic-nav-dropdown">
