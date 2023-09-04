@@ -8,7 +8,7 @@ export default function GetStarted() {
                 <span style={{ color: 'grey' }} >Get started on GitHub</span>
                 <span style={{ float: 'right', fontWeight: '1000' }} >...</span>
             </section>
-            <section style={{ display: 'flex', flexWrap:'wrap' }}>
+            <section style={{ display: 'flex', flexWrap:'wrap',justifyContent:'space-between' ,width:'100%'}}>
                 <div class="card" style={{ width: '20rem', marginTop: '20px' }}> 
                     <div class="card-body"  >
                         
@@ -18,7 +18,7 @@ export default function GetStarted() {
                 </div>
 
 
-                <div class="card" style={{ width: '20rem', marginTop: '20px',marginLeft:'24px' }}>
+                <div class="card" style={{ width: '20rem', marginTop: '20px' }}>
                     <div class="card-body">
                         <img style={{float:'left'}} src={pull} alt='pull icon'/><br/><br/><br/>
                         <h5 class="card-title" style={{ textAlign: 'left', fontSize: '1rem' }}>Follow this exercise to try the GitHub flow</h5>

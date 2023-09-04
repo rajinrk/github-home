@@ -10,6 +10,11 @@
     box-sizing: border-box;
     
 }
+@media(max-width:800px){
+    .left-section-container{
+        display: none;
+    }
+}
 .new-container{
     width:100%;
     display: flex;

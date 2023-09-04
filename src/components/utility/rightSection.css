@@ -26,4 +26,10 @@
         display:none;
        
     }
+    .right-section-container{
+       
+        position:absolute;
+        transform: translate(-20%);
+       
+    }
 }

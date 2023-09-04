@@ -11,7 +11,7 @@ export default function ForYouComponent() {
                 <span style={{ color: 'grey' }} >start writing code</span>
                 <span style={{ float: 'right', fontWeight: '1000' }} >...</span>
             </section>
-            <section style={{ display: 'flex', flexWrap:'wrap' }}>
+            <section style={{ display: 'flex', flexWrap:'wrap',width:'100%',justifyContent:'space-between' }}>
                 <div class="card" style={{ width: '20rem', marginTop: '20px' }}>
                     <div class="card-body">
                         <h5 class="card-title" style={{ textAlign: 'left', fontSize: '1rem' }}>Start a new repository</h5>
@@ -40,7 +40,7 @@ export default function ForYouComponent() {
                 </div>
 
 
-                <div class="card" style={{ width: '20rem', marginTop: '20px',marginLeft:'24px' }}>
+                <div class="card" style={{ width: '20rem', marginTop: '20px' }}>
                     <div class="card-body">
                         <h5 class="card-title" style={{ textAlign: 'left', fontSize: '1rem' }}>Introduce yourself with a profile README</h5>
                         <p class="card-text" style={{ textAlign: 'left' }}>Share information about yourself by creating a profile README, which appears at the top of your profile page.</p>
@@ -48,8 +48,8 @@ export default function ForYouComponent() {
 
                             <div class="card-body">
                                 <div class='d-flex'>
-                                    <h5 class="card-title">Card title</h5>
-                                    <button style={{ width: '30%',marginLeft:'30%' , backgroundColor: 'green', fontSize: '1rem',border:'none', padding: '1px 7px' }} class="btn btn-primary" onClick={()=>navigate('/new')}>create</button>
+                                    <h5 class="card-title" style={{fontSize:'.9rem'}}>username/README.md</h5>
+                                    <button style={{ width: '30%',marginLeft:'10%' , backgroundColor: 'green', fontSize: '1rem',border:'none', padding: '1px 7px' }} class="btn btn-primary" onClick={()=>navigate('/new')}>create</button>
 
                                 </div>
                                 <p class="card-text" style={{textAlign:'left'}}>
