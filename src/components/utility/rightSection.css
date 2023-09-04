@@ -13,13 +13,9 @@
 }
 .feeds-container{
     width:68%;
-    
-    /* border: 1px solid grey; */
 }
 .explore-container{
    width:32%;
-    
-    /* border: 1px solid grey; */
 }
 @media(max-width:800px){
     .explore-container{
@@ -27,9 +23,7 @@
        
     }
     .right-section-container{
-       
-        position:absolute;
-        transform: translate(-20%);
-       
+       width:100%;
     }
+    
 }
